@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* 
+=== GLOBAL FONT ===
+font-family: 'Open Sans', sans-serif;
+=== HEADING & TEXT ===
+font-family: 'Poppins', sans-serif;
+*/
+
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+/* === Track === */
+::-webkit-scrollbar-track {
+  background: linear-gradient(90deg,#434343,#434343 1px,#111 0,#111);
+}
+ 
+/* === Handle === */
+::-webkit-scrollbar-thumb {
+
+  /* background: #434343; */
+  background: #18152c;
+  border-radius: 16px;
+  box-shadow: inset 2px 2px 2px hsl(0deg 0% 100% / 25%), inset -2px -2px 2px rgb(0 0 0 / 25%);
+}
+
+/* === Handle on hover === */
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer; 
+}
+:root {
+  /* Color Theme Swatches in Hex */
+  --white: #F2F2F2;
+  --offwhite: #F6F6F6;
+  --brightred: #f22929;
+  --lightred: #BF2A37;
+  --darkred: #8C1822;
+  --navyblue: #141640;
+  --grey: #495773;
+  --gold: #ecbd45;
+  --cardprimary: #21BDCA;
+  --black-heading: rgba(0,0,0,0.82);
+  --main-gray-text: #727272;
+  --white-text: rgba(255,255,255,0.79);
+  --lite-gray-text: #d3d3d3;
+  --hard-gray-text: #7A7A7A;
+  --transparent: transparent;
+  --hard-blue-gradient: linear-gradient(
+    240deg
+    , #2243ce 0%, #6b2fc1 100%);
+  --orange-gradient: linear-gradient(
+    270deg
+    , #e45729 0%, #6730c1 100%);
+  --lite-blue-gradient: linear-gradient(
+    270deg
+    , #32c9c3 0%, #423ead 100%);
+  --purple-gradient: linear-gradient(
+    110deg
+    , rgba(3,41,199,0.77) 0%, rgba(114,45,198,0.84) 100%);
+  --font: 'Poppins', sans-serif;
+  --text: #f9bd96;
+  --navy: #110f1f;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+  font-family: var(--font);
+}
+
+body {
+  font-family: var(--font);
+  /* font-size: 14px; */
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.8;
+  background-color: #ebedee;
+  /* background-image: radial-gradient(50% 50% at top center,rgba(0,0,0,.77),#262626); */
+  /* color: #4a4a4a; */
+  color: #db6617;
+  margin: 0;
+  
+}
+::selection {
+  background-color: #db6617;
+  color: #ebedee;
+}
