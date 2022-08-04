@@ -5,6 +5,7 @@ const bcrypt = require('bcrypt');
 const regAuth = require('express').Router()
 
 regAuth.post('/', (req, res) => {
+
     const {name, password, email} = req.body
     if (!name || !password || !email) {
         const error = errorGenerator(400, 'BAD REQUEST')
