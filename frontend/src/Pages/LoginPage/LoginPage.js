@@ -11,6 +11,9 @@ const LoginPage = () => {
     const loginFunc = async () => {
         const data = await UserApi.loginUser(email, password)
         console.log(data);
+        if (data) {
+            window.location.reload()
+        }
     }
 
     return (

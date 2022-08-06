@@ -33,7 +33,7 @@ logAuth.post('/', (req, res) => {
             }
             const payload = {}
             const jwtOptions = {
-                expiresIn: '60s',
+                expiresIn: '1222222222222s',
                 issuer: 'Nadim',
                 audience: `aweasrxtdcfyvgjhukbnlm${user.id}uiolkymtghjfngbdvsawesrxdtcfyvghjb`
             }
@@ -43,7 +43,7 @@ logAuth.post('/', (req, res) => {
                     res.status(BadReq.status).json(BadReq)
                     return
                 }
-                const success = succResGenerator(200, 'OK', {token : token})
+                const success = succResGenerator(200, 'OK', {token})
                 res.status(success.status).json(success)
                 return
             })

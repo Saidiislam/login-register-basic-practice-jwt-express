@@ -15,11 +15,11 @@ export const CONTENT_TYPE = {
 }
 
 class ApiStructure {
-    HOST = 'http://localhost:5000'
+    HOST = 'http://localhost:5000/'
 
     async get(endpoint, payload) {
         const params = qs.stringify(payload)
-        return this.genericFetch(endpoint, METHOD.GET, params)
+        return this.genericFetch(`${endpoint}?${params}`, METHOD.GET, null)
     }
 
     async post(endpoint, payload, contentType) {
@@ -88,7 +88,7 @@ class ApiStructure {
         }
 
         extheaders = {
-            'Content-Type' : 'application/json'
+            'Content-type' : 'application/json'
         }
 
         return this.genericFetch(endpoint, METHOD.DELETE, requestBody, extheaders)
@@ -105,11 +105,9 @@ class ApiStructure {
         }
         
         if (extheaders) {
-            Object.keys(extheaders).forEach(item => {
-                if (item === 'sec-ch-ua-platform') {
-                    headers[item] = extheaders[item]
-                }
-            }) 
+            Object.keys(extheaders).forEach(headerName => {
+                headers[headerName] = extheaders[headerName]
+            })
         }
         
         const options = {
@@ -117,6 +115,7 @@ class ApiStructure {
             headers,
             body
         }
+        
 
         const result = await fetch(url, options)
         const response = await this.parseResult(result)
